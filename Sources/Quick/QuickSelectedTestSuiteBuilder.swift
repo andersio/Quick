@@ -62,7 +62,7 @@ private func testCaseClassForTestCaseWithName(_ name: String) -> AnyClass? {
     }
 
     guard let className = extractClassName(name) else { return nil }
-    guard let bundle = NSBundle.currentTestBundle else { return nil }
+    guard let bundle = Bundle.currentTestBundle else { return nil }
 
     if let testCaseClass = bundle.classNamed(className) { return testCaseClass }
 
